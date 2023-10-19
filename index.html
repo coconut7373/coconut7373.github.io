@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta name="twitter:title" content="coco.github">
+<meta name="twitter:description" content="Coconut profile card">
+<meta name="twitter:image" content="profile-pic.jpg">
+<meta name="twitter:card" content="large-image.gif">
+  <title>coconut</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'><link rel="stylesheet" href="style.css">
+ <link rel="icon" type="image/png" href="favicon.png">
+<script language="JavaScript">
+       window.onload = function() {
+           document.addEventListener("contextmenu", function(e) {
+               e.preventDefault();
+           }, false);
+           document.addEventListener("keydown", function(e){
+//"I" key
+if (e.ctrlKey && e.shiftKey && e.keyCode == 73){
+    disabledEvent(e);
+}
+//"J" key
+if (e.ctrlKey && e.shiftKey && e.keyCode == 74){
+    disabledEvent(e);
+}
+//"S" key + macOS
+if (e.keyCode == 83 && (navigator.platform.match("Mac")? e.metaKey : e.ctrlKey)) {
+    disabledEvent(e);
+}
+//"U" key
+if (e.ctrlKey && e.keyCode == 85) {
+    disabledEvent(e);
+}
+//"F12" key
+if (event.keyCode == 123) {
+    disabledEvent(e);
+}          
+}, false);
+
+function disabledEvent(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    } else if (window.event) {
+        window.event.cancelBubble = true;
+    }
+    e.preventDefault();
+    return false;
+       }
+}
+   </script>
+<style>
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+</style><script type="text/JavaScript">
+    function killCopy(e){
+        return false
+    }
+    function reEnable(){
+        return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+        document.onmousedown=killCopy
+        document.onclick=reEnable
+    }
+</script>
+</head>
+<body>
+<input id="slider" class="customSlider" type="checkbox">
+<label for="slider"></label>
+
+<div class="wrapper">
+	<div class="top-icons">
+		<i class="fas fa-long-arrow-alt-left"></i>
+		<i class="fas fa-ellipsis-v"></i>
+		<i class="far fa-heart"></i>
+	</div>
+	
+	<div class="profile">
+		<img src="profile-pic.jpg" class="thumbnail">
+		<div class="check"><i class="fas fa-check"></i></div>
+		<h3 class="name">coconut</h3>
+		<p class="title">Cool Developer</p>
+		<p class="description">;)</p>
+	</div>
+	
+	<div class="social-icons">
+		<div class="icon">
+			<a href="https://github.com/coconut7373"><i class="fab fa-github"></i></a>
+			<h4>0</h4>
+			<p>Projects</p>
+		</div>
+		
+		<div class="icon">
+			<a href="https://www.reddit.com/u/Practical_Price4487?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button"><i class="fab fa-reddit"></i></a>
+			<h4>1</h4>
+			<p>Karma</p>
+		</div>
+		
+		<div class="icon">
+			<a href="https://discord.gg/Q4CHUn9qwh"><i class="fab fa-discord"></i></a>
+			<h4>282</h4>
+			<p>Members</p>
+		</div>
+	</div>
+</div>
+
+<div class="concept">concept by 
+	<a href="https://discord.gg/Q4CHUn9qwh" target="_blank">
+		<i class="fab fa-discord"></i> Coconut#7373
+	</a>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.js'></script>
+</body>
+</html>
